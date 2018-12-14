@@ -35,4 +35,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <ImageView
+        android:id="@+id/die1Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="DiceImage"
+        android:src="@drawable/die_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollButton" />
+
+    <ImageView
+        android:id="@+id/die2Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="DiceImage"
+        android:src="@drawable/die_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollButton" />
+
+    <ImageView
+        android:id="@+id/die3Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="DiceImage"
+        android:src="@drawable/die_3"
+        app:layout_constraintEnd_toStartOf="@+id/die2Image"
+        app:layout_constraintStart_toEndOf="@+id/die1Image"
+        app:layout_constraintTop_toBottomOf="@+id/rollButton" />
+
 </android.support.constraint.ConstraintLayout>

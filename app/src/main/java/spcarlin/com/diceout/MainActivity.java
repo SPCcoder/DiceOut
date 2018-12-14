@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.TextView;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView rollResult;
     Button rollButton;
 
+    ArrayList<ImageView> diceImageViews;
     //field to hold the score
     int score;
     Random rand;
@@ -55,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
         dice = new ArrayList<Integer>();
 
+        ImageView die1Image = (ImageView) findViewById(R.id.die1Image);
+        ImageView die2Image = (ImageView) findViewById(R.id.die2Image);
+        ImageView die3Image = (ImageView) findViewById(R.id.die3Image);
+        diceImageViews = new ArrayList<ImageView>();
+        diceImageViews.add(die1Image);
+        diceImageViews.add(die2Image);
+        diceImageViews.add(die3Image);
+
         //create toast
         Toast.makeText(getApplicationContext(), "Welcome to Diceout!",Toast.LENGTH_SHORT).show();
     }
@@ -76,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         String mesg = "You rolled a " + die1 + ", a " + die2 + ", and a " + die3;
 
         rollResult.setText(mesg);
+
         //int num = rand.nextInt(6)+1;
         //String randomValue = "Number generated: " + num;
         //Toast.makeText(getApplicationContext(), randomValue, Toast.LENGTH_SHORT).show();
