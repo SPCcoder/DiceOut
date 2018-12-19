@@ -87,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
 
         rollResult.setText(mesg);
 
+        ImageView diceImg1 = (ImageView) findViewById(R.id.die1Image);
+        ImageView diceImg2 = (ImageView) findViewById(R.id.die2Image);
+        ImageView diceImg3 = (ImageView) findViewById(R.id.die3Image);
+
+        diceImageViews = new ArrayList<ImageView>();
+        diceImageViews.add(diceImg1);
+        diceImageViews.add(diceImg2);
+        diceImageViews.add(diceImg3);
+
         //int num = rand.nextInt(6)+1;
         //String randomValue = "Number generated: " + num;
         //Toast.makeText(getApplicationContext(), randomValue, Toast.LENGTH_SHORT).show();
